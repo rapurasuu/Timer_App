@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DBB Timer</string>
+    <string name="button_new_timer">+</string>
+    <string name="button_delete_timer">X</string>
+    <string name="button_folded">></string>
+    <string name="button_unfolded">˅</string>
+    <string name="new_timer">Neuer Timer</string>
+    <string name="end_date">Timer Enddatum</string>
+    <string name="timer_name">Timer Name</string>
+    <string name="editText_errorMessage">Das Feld darf nicht leer sein!</string>
+    <string name="current_timers">Aktuelle Timer</string>
+    <string name="dummy_text">Dummy Text</string>
+    <string name="foldableParentNotFound">!!! Foldable Layout Not Found !!!</string>
+    <string name="textView_stillXTime">Noch </string>
+    <string name="textView_untilXTime">bis </string>
+</resources>

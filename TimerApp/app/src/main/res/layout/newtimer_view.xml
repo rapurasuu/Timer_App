@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layout_foldableParent"
+                                                       android:layout_width="match_parent"
+                                                       android:layout_height="wrap_content"
+                                                       app:layout_constraintTop_toTopOf="parent"
+                                                       app:layout_constraintLeft_toLeftOf="parent"
+                                                       app:layout_constraintRight_toRightOf="parent">
+
+        <include android:id="@+id/include_header"
+                 layout="@layout/header"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintLeft_toLeftOf="parent"
+                 app:layout_constraintRight_toRightOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layout_foldable"
+                                                           android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content"
+                                                           app:layout_constraintTop_toBottomOf="@+id/include_header"
+                                                           app:layout_constraintLeft_toLeftOf="parent">
+
+            <androidx.core.widget.NestedScrollView android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content"
+                                                   android:paddingBottom="100dp"
+                                                   app:layout_constraintTop_toTopOf="parent"
+                                                   app:layout_constraintLeft_toLeftOf="parent"
+                                                   app:layout_constraintRight_toRightOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                                   android:layout_height="wrap_content">
+
+                    <EditText android:id="@+id/editText_timerName"
+                              android:hint="@string/timer_name"
+                              android:layout_height="wrap_content"
+                              android:layout_width="wrap_content"
+                              android:layout_marginTop="10dp"
+                              app:layout_constraintTop_toTopOf="parent"
+                              app:layout_constraintLeft_toLeftOf="parent"
+                              app:layout_constraintRight_toLeftOf="@+id/butto_AddTimer"/>
+
+                    <Button android:id="@+id/butto_AddTimer"
+                            android:text="@string/button_new_timer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="@+id/editText_timerName"
+                            app:layout_constraintLeft_toRightOf="@+id/editText_timerName"
+                            app:layout_constraintRight_toRightOf="parent"/>
+
+                    <DatePicker android:id="@+id/datePicker_endDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"
+                                app:layout_constraintTop_toBottomOf="@+id/butto_AddTimer"
+                                app:layout_constraintLeft_toLeftOf="parent"
+                                app:layout_constraintRight_toRightOf="parent"/>
+
+                    <TimePicker android:id="@+id/timePicker_endTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintTop_toBottomOf="@+id/datePicker_endDate"
+                                app:layout_constraintLeft_toLeftOf="@id/datePicker_endDate"
+                                app:layout_constraintRight_toRightOf="@id/datePicker_endDate"
+                                android:paddingLeft="30dp"
+                                android:paddingRight="30dp"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
